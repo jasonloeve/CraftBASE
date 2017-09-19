@@ -1,0 +1,76 @@
+.landing
+  .content-block
+    padding: 3rem 0
+    font-size: 1.4rem
+    line-height: 2rem
+
+    @media (min-width: 992px)
+      padding: 5rem 0
+      font-size: 1.5rem
+      line-height: 2.2rem
+
+    img
+      max-width: 100%
+
+    h1
+      font-size: 3rem
+      line-height: 3.5rem
+      font-weight: 600
+      margin: 0
+
+      @media (min-width: 992px)
+        font-size: 32px
+        line-height: 41px
+
+    h2
+      font-size: 3rem
+      font-weight: 300
+      line-height: 4.1rem
+      margin: 0
+
+    h2 + p
+      margin-top: 3rem
+
+    h3
+      +h2
+
+      font-family: 'Proxima Nova'
+      margin: 0
+
+    h4
+      margin: 3rem 0
+
+      @media (min-width: 992px)
+        margin: 5rem 0
+
+    .button
+      a
+        +button
+
+    h1 + .button,
+    p + .button,
+    ul + .button
+      margin-top: 2rem
+
+      @media (min-width: 992px)
+        margin-top: 3rem
+
+    h3 + p
+      margin-top: 3rem
+
+      @media (min-width: 992px)
+        margin-top: 3.6rem
+
+    ul
+      padding-left: 2rem
+
+      li
+        list-style: none
+        margin-left: 0.5rem
+
+      li:before
+        content: '\e013'
+        font-family: 'Glyphicons Halflings'
+        font-size: 1.2rem
+        float: left
+        margin-left: -2.3rem

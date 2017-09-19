@@ -1,0 +1,105 @@
+.services
+  .page-title
+    margin-bottom: 143px
+
+  #services-matrix
+    .service
+      margin-bottom: 90px
+
+      .ico-wrap
+        position: relative
+        width: 50px
+        height: 50px
+        display: inline-block
+        cursor: pointer
+        margin-right: 32px
+        margin-bottom: 25px
+
+        .ico
+          position: absolute
+          fill: $color-blue-grand
+          width: 52px
+          height: 52px
+
+      h2
+        font-size: 20px
+        font-weight: bold
+        line-height: 23px
+        margin-top: 0
+        margin-bottom: 11px
+
+      p
+        font-size: 15px
+        line-height: 23px
+
+        @media (min-width: 768px)
+          max-width: 240px
+
+  #services-tags
+    +services-tags
+
+  #projects-grid
+    margin-top: -237px
+
+    .row
+      & > [class*="col-"]
+        padding-right: 0
+        padding-left: 0
+
+    h4
+      color: $color-white
+
+    .thumbnail
+      +project-listing-item
+
+    .grey-bg
+      height: 80px
+
+      @media (min-width: 768px)
+        background-color: $color-footer-grey
+        height: 125px
+        margin-top: -125px
+
+      @media (min-width: 992px)
+        height: 162px
+        margin-top: -162px
+
+      @media (min-width: 1200px)
+        height: 195px
+        margin-top: -195px
+
+  #testimonials
+    background-color: $color-footer-grey
+    padding-top: 100px
+
+    #testimonial-container
+      background-color: #FFFFFF
+      overflow: hidden
+
+      .testimonial-body
+        @media (min-width: 768px)
+          width: 649px
+
+        margin: 70px auto 19px
+        font-size: 18px
+        font-weight: 300
+        line-height: 30px
+
+      .testimonial-author
+        font-size: 20px
+        font-weight: bold
+        line-height: 23px
+        margin-bottom: 75px
+
+  #get-in-touch
+    background-color: $color-footer-grey
+
+    h2
+      margin-top: 95px
+      margin-bottom: 24px
+
+    .btn
+      +button(270px)
+
+      margin: 37px 0 100px 0
+      display: inline-block !important

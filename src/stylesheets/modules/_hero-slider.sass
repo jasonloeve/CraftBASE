@@ -1,0 +1,48 @@
+$hero-slider-height: 44rem
+
+.hero-slider
+  height: $hero-slider-height
+  z-index: 1
+  position: relative
+  &-fore
+    align-items: center
+    display: flex
+    height: $hero-slider-height
+    position: relative
+    z-index: 3
+    &-content
+      max-width: 34rem
+  &-back
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    height: $hero-slider-height
+  &-slick
+    .slick-slide
+      width: 100%
+      height: $hero-slider-height
+      img
+        position: absolute
+        bottom: 0
+        right: 0
+  &-title
+    color: $c-white
+    font-size: $size-1
+    line-height: 1
+  &-mouse
+    bottom: 0
+    display: block
+    font-size: 3rem
+    left: 0
+    line-height: 1
+    margin-left: auto
+    margin-right: auto
+    position: absolute
+    right: 0
+    text-align: center
+    z-index: 3
+    padding-bottom: 1rem
+    svg
+      fill: $c-white

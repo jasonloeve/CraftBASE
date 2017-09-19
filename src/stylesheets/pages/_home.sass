@@ -1,0 +1,946 @@
+.home
+  #header
+    animation: colorchange 40s infinite
+
+    @keyframes colorchange
+      0%
+        background: $color-blue-grand
+
+      28%
+        background: $color-blue-grand
+
+      33%
+        background: #fe8a28
+
+      61%
+        background: #fe8a28
+
+      66%
+        background: #de9ced
+
+      94%
+        background: #de9ced
+
+      99%
+        background: $color-blue-grand
+
+      100%
+        background: $color-blue-grand
+
+  .jumbotron
+    color: $color-white
+    position: relative
+    z-index: 0
+    padding-top: 0
+    padding-bottom: 77px
+
+    @media (min-width: 768px)
+      padding-top: 100px
+      padding-bottom: 0
+
+    margin: 0
+    overflow: hidden
+    background-color: $color-blue-grand
+    animation: colorchange 40s infinite
+
+    @keyframes colorchange
+      0%
+        background: $color-blue-grand
+
+      28%
+        background: $color-blue-grand
+
+      33%
+        background: #fe8a28
+
+      61%
+        background: #fe8a28
+
+      66%
+        background: #de9ced
+
+      94%
+        background: #de9ced
+
+      99%
+        background: $color-blue-grand
+
+      100%
+        background: $color-blue-grand
+
+    .jumbotron-slide
+      opacity: 0
+
+      & > img
+        position: absolute
+
+      &#jumbotron-slide-1
+        animation: changeopacity1 40s infinite
+
+        @keyframes changeopacity1
+          0%
+            opacity: 1
+
+          28%
+            opacity: 1
+
+          33%
+            opacity: 0
+
+          99%
+            opacity: 0
+
+          100%
+            opacity: 1
+
+        & > img:first-child
+          display: none
+
+          @media (min-width: 768px)
+            width: 740px
+            top: 13px
+            left: 47.247%
+            display: block
+
+          @media (min-width: 992px)
+            width: 855px
+            display: block
+            top: -48px
+            left: calc(50% + calc(1210px - 1280px))
+            animation: moveslide1a 40s infinite
+
+          @keyframes moveslide1a
+            0%
+              top: 690px
+
+            5%
+              top: -89px
+
+            26%
+              top: -89px
+
+            27%
+              top: 690px
+
+            100%
+              top: 690px
+
+        & > img:nth-child(2)
+          display: none
+          width: 296px
+          top: 46px
+          left: 65.989%
+
+          @media (min-width: 992px)
+            display: block
+            left: calc(50% + calc(1690px - 1280px))
+            animation: moveslide1b 40s infinite
+
+          @keyframes moveslide1b
+            0%
+              top: 690px
+
+            2%
+              top: 690px
+
+            7%
+              top: -14px
+
+            26%
+              top: -14px
+
+            27%
+              top: 690px
+
+            100%
+              top: 690px
+
+        & > img:last-child
+          display: none
+
+          @media (min-width: 768px)
+            width: 473px
+            top: 290px
+            left: 65%
+            display: block
+
+          @media (min-width: 992px)
+            width: 513px
+            display: block
+            top: 248px
+            left: calc(50% + calc(1375px - 1280px))
+            animation: moveslide1c 40s infinite
+
+          @keyframes moveslide1c
+            0%
+              top: 690px
+
+            8%
+              top: 255px
+
+            26%
+              top: 255px
+
+            27%
+              top: 690px
+
+            100%
+              top: 690px
+
+      &#jumbotron-slide-2
+        animation: changeopacity2 40s infinite
+
+        @keyframes changeopacity2
+          0%
+            opacity: 0
+
+          28%
+            opacity: 0
+
+          33%
+            opacity: 1
+
+          61%
+            opacity: 1
+
+          66%
+            opacity: 0
+
+          100%
+            opacity: 0
+
+        & > img:first-child
+          display: none
+          width: 400px
+          top: 165px
+          left: 51.932%
+
+          @media (min-width: 992px)
+            display: block
+            left: calc(50% + calc(1330px - 1280px))
+            animation: moveslide2a 40s infinite
+
+          z-index: 4
+
+          @keyframes moveslide2a
+            0%
+              top: 690px
+
+            35%
+              top: 690px
+
+            40%
+              top: 105px
+
+            59%
+              top: 105px
+
+            60%
+              top: 690px
+
+            100%
+              top: 690px
+
+        & > img:nth-child(2)
+          display: none
+          width: 400px
+          top: 130px
+          left: 59.586%
+
+          @media (min-width: 768px)
+            top: 45px
+            display: block
+
+          @media (min-width: 992px)
+            left: calc(50% + calc(1526px - 1280px))
+            animation: moveslide2b 40s infinite
+
+          z-index: 3
+
+          @keyframes moveslide2b
+            0%
+              top: 690px
+
+            34%
+              top: 690px
+
+            39%
+              top: 70px
+
+            59%
+              top: 70px
+
+            60%
+              top: 690px
+
+            100%
+              top: 690px
+
+        & > img:last-child
+          display: none
+          width: 400px
+          top: 162px
+          left: 67.278%
+
+          @media (min-width: 992px)
+            display: block
+            left: calc(50% + calc(1723px - 1280px))
+            animation: moveslide2c 40s infinite
+
+          z-index: 2
+
+          @keyframes moveslide2c
+            0%
+              top: 690px
+
+            33%
+              top: 690px
+
+            38%
+              top: 102px
+
+            59%
+              top: 102px
+
+            60%
+              top: 690px
+
+            100%
+              top: 690px
+
+      &#jumbotron-slide-3
+        animation: changeopacity3 40s infinite
+
+        @keyframes changeopacity3
+          0%
+            opacity: 0
+
+          61%
+            opacity: 0
+
+          66%
+            opacity: 1
+
+          94%
+            opacity: 1
+
+          99%
+            opacity: 0
+
+          100%
+            opacity: 0
+
+        & > img:first-child
+          display: none
+          width: 591px
+          left: 56.852%
+          z-index: 3
+
+          @media (min-width: 768px)
+            top: 201px
+            left: 55%
+            display: block
+
+          @media (min-width: 992px)
+            left: calc(50% + 100px)
+            animation: moveslide3a 40s infinite
+
+          @keyframes moveslide3a
+            0%
+              top: 690px
+
+            66%
+              top: 690px
+
+            71%
+              top: 178px
+
+            93%
+              top: 178px
+
+            94%
+              top: 690px
+
+            100%
+              top: 690px
+
+        & > img:last-child
+          display: none
+          width: 800px
+          z-index: 2
+
+          @media (min-width: 992px)
+            display: block
+            left: calc(50% - 10px)
+            animation: moveslide3c 40s infinite
+
+          @keyframes moveslide3c
+            0%
+              top: 690px
+
+            67%
+              top: 690px
+
+            72%
+              top: 30px
+
+            93%
+              top: 30px
+
+            94%
+              top: 690px
+
+            100%
+              top: 690px
+
+    .col-md-12
+      @media (min-width: 768px)
+        height: 380px
+
+      @media (min-width: 992px)
+        height: 444px
+
+    h1
+      margin-top: 7.3rem
+      margin-bottom: 1.8rem
+      max-width: 69.5%
+
+      +h1
+
+      @media (min-width: 768px)
+        margin-top: 8.7rem
+        margin-bottom: 1.3rem
+        max-width: 450px
+
+      & + p
+        font-size: 1.6rem
+        line-height: 1.9rem
+        margin-bottom: 3.9rem
+        font-weight: 600
+
+        @media (min-width: 768px)
+          font-size: 2rem
+          line-height: 2.4rem
+          margin-bottom: 4.7rem
+
+    a
+      color: $color-white
+
+    .btn-default.btn-lg
+      +button($width: 14.5rem)
+
+      margin: 0 10px 0 0
+      display: inline-block
+      background-color: $color-white
+      color: $color-mid-blue-grand
+
+      &:hover,
+      &:active
+        background-color: $color-mid-blue-grand
+        color: $color-white
+
+    .btn-link
+      font-size: 1.2rem
+      line-height: 1.4rem
+      font-weight: bold
+      transition: all 1s
+
+      &:hover,
+      &:active
+        text-decoration: none
+        padding-left: 2rem
+
+    #home-cover-image
+      position: absolute
+      z-index: -1
+      top: 93px
+      display: none
+
+      @media (min-width: 992px)
+        display: block
+        right: calc(-180px + calc(100% - 970px) / 2)
+
+      @media (min-width: 1200px)
+        right: calc(-160px + calc(100% - 1170px) / 2)
+
+    .icon-scroll,
+    .icon-scroll:before
+      position: absolute
+      left: 50%
+
+    .icon-scroll
+      width: 26px
+      height: 42px
+      margin-left: -20px
+      bottom: 4%
+      margin-top: -35px
+      box-shadow: inset 0 0 0 2px $color-white
+      border-radius: 25px
+
+      &:before
+        content: ''
+        width: 8px
+        height: 8px
+        background: #fff
+        margin-left: -4px
+        top: 5px
+        border-radius: 4px
+        animation-duration: 1.5s
+        animation-iteration-count: infinite
+        animation-name: scroll
+
+    @keyframes scroll
+      0%
+        opacity: 1
+
+      100%
+        opacity: 0
+        transform: translateY(30px)
+
+  #scrolling-scenes
+    #pin
+      #pin-content
+        padding-left: 2.5rem
+        padding-right: 2.5rem
+        padding-bottom: 5rem
+
+        @media (min-width: 768px)
+          padding-left: 0
+          padding-right: 0
+          padding-bottom: 16rem
+
+        @media (min-width: 1980px)
+          width: 82%
+          margin: 0 auto
+
+        #colour-box-bg
+          width: 100%
+          padding-bottom: 60%
+          margin: 0 auto
+          position: relative
+          background-size: contain !important
+          transition: all 0.2s
+          background: url("../images/macbook.jpg") no-repeat center top
+
+          @media (min-width: 992px)
+            width: 50%
+            float: left
+            padding-bottom: 30%
+            max-width: 100%
+            transform: translateX(-7%)
+
+          #colour-box
+            width: 74%
+            height: 78%
+            margin-right: 155px
+            margin-top: 44px
+            position: absolute
+            top: 7.5%
+            left: 13.05%
+            right: 13%
+            margin-top: 0
+            margin-right: 0
+
+            .carousel-inner
+              width: 100%
+              height: 100%
+
+              &.current-0
+                background-color: $color-blue-grand
+
+              &.current-1
+                background-color: #c9e548
+
+              &.current-2
+                background-color: #de9ced
+
+              & > .colour-box-items
+                width: 100%
+                height: 100%
+                opacity: 0
+                transition: opacity 0.8s
+
+                &.active
+                  opacity: 1
+                  display: inline-block
+
+                .slide-inner
+                  font-size: 0
+                  width: 80%
+                  margin: 10% auto
+
+                  img
+
+                &#colour-box-items-0
+                  img
+                    width: 28%
+                    margin-right: 8%
+
+                    @media (min-width: 1980px)
+                      width: 28%
+                      margin-right: 8%
+
+                    &:first-child
+                      animation-delay: 0.5s
+
+                    &:nth-child(2)
+
+                    &:last-child
+                      margin-right: 0
+                      animation-delay: 0.8s
+
+                &#colour-box-items-1
+                  position: relative
+
+                  .slide-inner
+                    height: 80%
+
+                  img
+                    vertical-align: bottom
+                    position: absolute
+                    bottom: 10%
+
+                    &:first-child
+                      width: 48.89%
+                      z-index: 4
+                      animation-delay: 0.5s
+
+                    &:nth-child(2)
+                      width: 56.7%
+                      left: 24%
+                      z-index: 2
+
+                    &:last-child
+                      width: 19%
+                      z-index: 3
+                      left: 77%
+                      animation-delay: 0.8s
+
+                &#colour-box-items-2
+                  position: relative
+
+                  .slide-inner
+                    height: 80%
+
+                  img
+                    vertical-align: bottom
+                    position: absolute
+                    bottom: 10%
+
+                    &:first-child
+                      width: 30.43%
+                      z-index: 4
+                      left: 4%
+                      animation-delay: 0.5s
+
+                    &:nth-child(2)
+                      width: 40.5%
+                      left: 39%
+                      z-index: 2
+
+                    &:last-child
+                      width: 22%
+                      z-index: 3
+                      left: 73%
+                      animation-delay: 0.8s
+
+      #pin-right
+        width: 338px
+        margin: 0 auto
+        text-align: center
+
+        @media (min-width: 992px)
+          text-align: left
+          float: left
+          width: 100%
+          max-width: 465px
+
+        h4
+          margin-bottom: 1.6rem
+
+        h3
+          margin-top: 0
+          margin-bottom: 24px
+
+          @media (max-width: 991px)
+            line-height: 3.7rem
+
+          br
+
+        .tk-merriweather
+          line-height: 2.7rem
+          margin-bottom: 0
+
+          @media (min-width: 768px)
+            padding: 0 5%
+
+          @media (min-width: 992px)
+            line-height: 3rem
+            padding: 0
+            font-size: 1.8rem
+
+        #pin-navigation
+          margin: 5rem 0 3.6rem 0
+          position: static
+          width: 100%
+
+          @media (min-width: 992px)
+            margin-top: 16.6%
+            text-align: left
+
+          .ico-wrap
+            position: relative
+            width: 4rem
+            height: 4rem
+            display: inline-block
+            cursor: pointer
+            margin-right: 32px
+
+            .ico
+              position: absolute
+              fill: lighten($color-blue-grand, 20%)
+              width: 4rem
+              height: 4rem
+              bottom: 0
+              transition: all 0.8s
+              left: 0
+
+            &.active
+              width: 5.3rem
+              height: 5.3rem
+
+              .ico
+                fill: $color-blue-grand
+                width: 5.3rem
+                height: 5.3rem
+
+      .pin-text
+        display: none
+
+        &.active
+          display: block
+
+        max-width: 338px
+
+        strong
+          display: block
+          font-size: 20px
+          font-weight: bold
+          line-height: 23px
+          margin-bottom: 13px
+
+        p
+          font-size: 15px
+          line-height: 23px
+          margin-bottom: 0
+
+  #services-tags
+    +services-tags
+
+  #get-in-touch
+    background-color: $color-footer-grey
+    padding-bottom: 0
+
+    @media (min-width: 768px)
+      padding-bottom: 0
+
+    .container
+      transform: translateY(-12rem)
+
+    #contact-info
+      margin-bottom: 5.2rem
+
+      @media (min-width: 768px)
+        margin-bottom: 2.8rem
+
+      @media (min-width: 992px)
+        margin-bottom: 4.3rem
+
+      h3
+        margin: 0 auto 1.3rem auto
+        line-height: 41px
+        max-width: 290px
+
+        @media (min-width: 768px)
+          max-width: 100%
+          margin: 0 0 0.7rem 0
+
+        @media (min-width: 992px)
+          margin: 0 0 2.4rem 0
+
+      p
+        font-size: 1.8rem
+        line-height: 2.2rem
+        margin: 0 auto
+        max-width: 90%
+
+        @media (min-width: 992px)
+          font-size: 20px
+          line-height: 24px
+          max-width: 100%
+
+    #contact-form
+      +contact-form
+
+#about-grand
+  padding: 32px 0 40px 0
+
+  @media (min-width: 768px)
+    padding: 48px 0 53px 0
+
+  @media (min-width: 992px)
+    padding: 65px 0 77px 0
+
+  h2
+    margin-top: 0
+    margin-bottom: 1.6rem
+
+  .tk-merriweather
+    line-height: 2.7rem
+    margin-bottom: 0
+
+    @media (min-width: 992px)
+      margin-left: 5%
+      font-size: 1.8rem
+      line-height: 3rem
+
+#featured-projects
+  max-width: 1600px
+  margin: 0 auto 40px
+  overflow: hidden
+
+  @media (min-width: 768px)
+    margin: 0 auto 16rem
+
+  .fp-item
+    display: block
+    width: 100%
+
+    @media (min-width: 576px)
+      float: left
+
+    .aspect
+      background-size: cover
+      background-repeat: no-repeat
+      padding-bottom: 100%
+      position: relative
+      overflow: hidden
+
+      & > div:first-child
+        width: 100%
+        padding-bottom: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transition: transform 0.8s
+
+      & > div:nth-child(2)
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%)
+        width: 100%
+        height: 100%
+        position: absolute
+        opacity: 0
+
+      & > div:last-child
+        +project-hover
+
+    &:first-child
+      @media (min-width: 576px)
+        width: 50%
+
+    &:nth-child(2)
+      @media (min-width: 576px)
+        width: 50%
+
+      .aspect
+        @media (min-width: 992px)
+          padding-bottom: 50%
+
+          & > div:first-child
+            padding-bottom: 50%
+
+    &:nth-child(3),
+    &:last-child
+      @media (min-width: 576px)
+        width: 50%
+
+      @media (min-width: 992px)
+        width: 25%
+
+      .aspect
+        & > div:first-child
+          background-size: contain
+
+    &:hover,
+    &:active
+      .aspect
+        & > div:first-child
+          transform: scale(1.2)
+
+        & > div:nth-child(2)
+          opacity: 0.5
+
+        & > div:last-child
+          opacity: 1
+
+#our-blog
+  background-color: #f2f2f2
+
+  .container
+    transform: translateY(-20rem)
+
+    @media (min-width: 768px)
+      transform: translateY(-31rem)
+
+    @media (min-width: 992px)
+      transform: translateY(-22rem)
+
+  #blog-container
+    h4
+      color: $color-white
+
+      @media (min-width: 992px)
+        margin-bottom: 20px
+
+    +blog-entry
+
+  #download-box
+    display: none
+
+    @media (min-width: 1200px)
+      display: block
+
+    h4
+      @media (min-width: 992px)
+        margin-bottom: 20px
+
+      @media (min-width: 1200px)
+        margin-left: 30px
+        color: $color-white
+
+    .col-md-12
+      position: relative
+      padding-right: 0
+      width: 370px
+      padding-left: 0
+      margin-left: 45px
+      overflow: hidden
+
+      img
+        width: 100%
+        transition: transform 0.8s
+
+        @media (min-width: 992px)
+          max-width: 370px
+
+          &:hover,
+          &:active
+            box-shadow: 0 8px 15px 0 rgba(102, 102, 102, 0.12)
+            transform: scale(1.2)
+
+      button
+        +button(216px)
+
+        position: absolute
+        left: 77px
+        bottom: 54px

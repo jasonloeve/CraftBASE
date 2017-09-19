@@ -1,0 +1,33 @@
+@keyframes scroll
+  0%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(0.8em)
+
+.mouse
+  border-radius: 1em
+  border: 2px solid $c-white
+  display: inline-block
+  font-size: 1em
+  line-height: 1
+  height: 1em
+  position: relative
+  text-align: center
+  width: 0.6em
+  &:before
+    animation: scroll 1.5s infinite
+    background-color: $c-white
+    border-radius: 50%
+    content: ''
+    display: block
+    height: 0.15em
+    left: 0
+    margin-left: auto
+    margin-right: auto
+    position: absolute
+    right: 0
+    top: 0
+    width: 0.15em
+

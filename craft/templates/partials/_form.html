@@ -1,0 +1,38 @@
+{% set form = craft.amForms.getForm('contact') %}
+<form class="homeform" method="post">
+  {{ getCsrfInput() }}
+  <input type="hidden" name="action" value="amForms/submissions/saveSubmission">
+  <input type="hidden" name="handle" value="{{ form.handle }}">
+  <input type="hidden" name="namespace" value="{{ form.getNamespace() }}">
+  <div class="field">
+    <div class="field-body">
+      <div class="field">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="First" name="{{ form.getNamespace() }}[fields][firstName]" required>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Last" name="{{ form.getNamespace() }}[fields][lastName]" required>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <p class="control is-expanded">
+      <input  class="input" type="email" placeholder="Email" name="{{ form.getNamespace() }}[fields][email]" required>
+    </p>
+  </div>
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Explain how we can help you" name="{{ form.getNamespace() }}[fields][name]" required></textarea>
+    </div>
+  </div>
+  <div class="field is-grouped is-grouped-centered">
+    <div class="control">
+      <button class="button is-primary">
+        Send message
+      </button>
+    </div>
+  </div>
+</form>

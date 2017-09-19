@@ -1,0 +1,11 @@
+<div class="services-list">
+  {% for servicesTag in servicesTags.servicesTags %}
+    {% if servicesTag.type == "tag" %}
+      {% if not servicesTag.tagUrl is empty %}
+        <a href="{{ servicesTag.tagUrl }}" title="{{ servicesTag.tagName }}" class="button is-outlined is-white">{{ servicesTag.tagName }}</a>
+      {% else %}
+        <span class="button is-outlined is-white">{{ servicesTag.tagName }}</span>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

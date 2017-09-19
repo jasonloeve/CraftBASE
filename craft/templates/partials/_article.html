@@ -1,0 +1,26 @@
+<article class="card is-hoverable">
+  <div class="card-image">
+    <a class="image is-4by3" href="{{ article.url }}">
+      <img src="{{ article.featuredImage.first().url }}" alt="{{ article.title }}">
+    </a>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <a class="title" href="{{ article.url }}">
+          {{ article.title }}
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <p>
+        {{ article.articleAbstract }}
+      </p>
+
+      {% for tag in article.tags %}
+        <span class="tag">{{ tag.title }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</article>
+

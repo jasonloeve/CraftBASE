@@ -1,0 +1,45 @@
+{% set nav = craft.amNav.getNavRaw( "mainNavigation" ) %}
+{% macro addNodeToNavigation(node, index) %}
+    {% set nodeClasses = ['navbar-item'] %}
+    {% if node.hasChildren %}
+      {% set nodeClasses = nodeClasses|merge(['has-dropdown', 'is-hoverable']) %}
+    {% endif %}
+    {% if node.active or node.hasActiveChild %}
+      {% set nodeClasses = nodeClasses|merge(['is-active']) %}
+    {% endif %}
+    {% set nodeClasses = nodeClasses|length ? nodeClasses|join(' ') : '' %}
+    {% if node.hasChildren %}
+      <div class="{{ nodeClasses }}">
+        <a class="navbar-link" href="{{ node.url }}">{{ node.name }}</a>
+        <div class="navbar-dropdown is-boxed">
+          {% for childNode in node.children %}
+            {{ _self.addNodeToNavigation(childNode, loop.index) }}
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <a class="{{ nodeClasses }}" href="{{ node.url }}">{{ node.name }}</a>
+    {% endif %}
+{% endmacro %}
+<nav class="navbar is-transparent">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ siteUrl }}">
+        {% include 'partials/svg' with { 'svgName': 'grand-logo', 'class': 'navbar-logo', 'viewBox': '0 0 120 42' } %}
+      </a>
+      <div class="navbar-burger burger" data-target="js-nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="js-nav-menu" class="navbar-menu">
+      <div class="navbar-end">
+        {% for node in nav %}
+          {{ _self.addNodeToNavigation(node, loop.index) }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>
+

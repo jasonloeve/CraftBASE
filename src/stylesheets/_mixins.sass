@@ -1,0 +1,533 @@
+=button($width: auto)
+  background-color: $color-blue-grand
+  font-size: 12px
+  font-weight: bold
+  line-height: 14px
+  color: #FFFFFF
+  width: $width
+  margin: 0 auto
+  border-radius: 2px
+  text-transform: uppercase
+
+  @if $width == "auto"
+    padding: 15px 36px 13px
+    display: inline-block
+  @else
+    padding: 15px 0 13px
+    display: block
+
+  &:hover, &:active, &:focus
+    background-color: $color-mid-blue-grand
+    text-decoration: none
+
+=categories
+  .nav-pills
+    & > li
+      margin-right: 48px
+      margin-bottom: 30px
+
+      & > a
+        color: $color-body
+        background-color: transparent
+        border: none
+        border-radius: 0
+        padding: 0 0 13px 0
+        font-size: 1.6rem
+        line-height: 2.4rem
+        font-weight: bold
+
+      &.active > a
+        color: $color-blue-grand
+        padding: 0 0 11px 0
+
+=project-hover
+  color: $color-white
+  text-align: center
+  width: 100%
+  top: calc(50% - 6.5rem)
+  position: absolute
+  opacity: 0
+
+  h4
+    letter-spacing: 0.1rem
+
+  h3
+    font-weight: 600
+    margin: 0 0 1rem 0
+
+    @media (min-width: 992px)
+      font-size: 3rem
+      line-height: 3rem
+
+  .project-hover-arrow
+    font-size: 3.5rem
+    opacity: 0.6
+
+    .fa-share
+      color: $color-blue-grand
+
+=blog-entry
+  .blog-entry
+    transition: all 0.2s
+
+    &:hover, &:active
+      @media (min-width: 992px)
+        transform: translateY(-0.8rem)
+
+        article
+          box-shadow: 0 8px 15px 0 rgba(102, 102, 102, 0.12)
+
+      article
+        .blog-entry-featured-image
+          .image
+            transform: scale(1.2)
+
+          .arrow
+            opacity: 0.5
+
+    article
+      background-color: $color-white
+      overflow: hidden
+      max-width: 370px
+      margin: 0 auto 32px auto
+
+      @media (min-width: 768px)
+        margin: 0 0 32px 0
+
+    &:last-child
+      article
+        margin: 0
+
+        @media (min-width: 768px)
+          margin: 0 0 32px 0
+
+    .blog-entry-featured-image
+      display: block
+      margin-bottom: 30px
+      height: 21.9rem
+      position: relative
+      overflow: hidden
+
+      .image
+        width: 100%
+        height: 100%
+        transition: transform 0.8s
+
+      .arrow
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        transition: opacity 0.8s
+        width: 100%
+        height: 100%
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%)
+        text-align: center
+
+        .fa-share
+          padding: 9rem 0 0 0
+          font-size: 3.5rem
+          color: $color-blue-grand
+          opacity: 1
+
+    .blog-entry-title, .blog-entry-abstract, .blog-entry-tags
+      padding: 0 40px
+
+    .blog-entry-title
+      display: block
+      font-size: 20px
+      font-weight: bold
+      line-height: 23px
+      color: $color-body
+      margin-bottom: 21px
+      padding: 0 40px
+
+      &:hover, &:active
+        text-decoration: none
+
+    .blog-entry-abstract
+      padding: 0 40px
+      margin-bottom: 24px
+      font-size: 15px
+      line-height: 23px
+
+    .blog-entry-tags
+      font-size: 13px
+      line-height: 16px
+      color: #8A8A86
+      margin-bottom: 35px
+
+=h1
+  font-size: 3.5rem
+  line-height: 4rem
+
+  @media (min-width: 992px)
+    font-size: 4.2rem
+    line-height: 4.6rem
+
+=h2
+  font-size: 20px
+  line-height: 23px
+
+=h3
+  font-size: 2.8rem
+  line-height: 2.2rem
+
+  @media (min-width: 992px)
+    font-size: 36px
+    line-height: 41px
+
+=h4
+  font-size: 14px
+  letter-spacing: 1px
+  line-height: 20px
+  text-transform: uppercase
+
+=services-tags
+  background-color: $color-footer-bg
+  color: $color-white
+  padding: 4rem 0 28rem 0
+
+  @media (min-width: 768px)
+    padding: 4rem 0 35.5rem 0
+
+  @media (min-width: 992px)
+    padding: 105px 0 33rem 0
+
+  h2
+    line-height: 1.4rem
+    margin: 0 0 20px 0
+
+    small
+      color: $color-white
+      font-size: 1.4rem
+      font-weight: 600
+      line-height: 20px
+      text-transform: uppercase
+
+  #services-tags-list
+    font-size: 0
+
+    .service-tag
+      display: inline-block
+      margin: 0 1.5rem 17.3px 0
+      border: 1px solid $color-white
+      font-size: 1.4rem
+      line-height: 1.7rem
+      text-align: center
+      padding: 8px 8px
+
+      @media (min-width: 768px)
+        margin: 0 2rem 17.3px 0
+        padding: 11.2px 2.6rem
+
+    .service-tag
+      color: $color-white
+      text-decoration: none
+
+      &:not(a)
+        cursor: default
+
+      &:hover, &:active
+        color: $color-footer-bg
+        background-color: $color-white
+
+=file-upload
+  position: absolute
+  width: 100%
+  bottom: 5px
+  right: 0
+  border: none
+  background: none
+  padding: 0 2rem
+
+  .inputfile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+  .inputfile + label
+    position: static
+    font-size: 1.2rem
+    float: right
+    line-height: 2.3rem
+    margin-bottom: 0
+    cursor: pointer
+
+    .fa-paperclip
+      font-size: 3rem
+      color: #8A8A86
+      line-height: 2.3rem
+      vertical-align: middle
+      margin-left: 5px
+
+=contact-form
+  padding: 0 1.5rem
+
+  @media (min-width: 768px)
+    padding: 0 14.1rem
+
+  @media (min-width: 992px)
+    padding: 0 7rem
+
+  form
+    .form-group
+      margin-bottom: 20px
+
+      .input-container
+        position: relative
+
+        &.col-sm-6:first-child
+          margin-bottom: 2rem
+
+          @media (min-width: 768px)
+            margin-bottom: 0
+
+        label
+          position: absolute
+          font-size: 17px
+          top: 11px
+          left: 26px
+          line-height: 20px
+          font-weight: normal
+          color: #8A8A86
+          transition: all 0.2s
+
+          &.active
+            font-size: 10px
+            line-height: 12px
+            color: #BEBEBE
+            top: 4px
+
+        .form-control
+          padding: 17px 11px 5px 11px
+          font-size: 17px
+          line-height: 20px
+          height: auto
+          border: 1px solid #D7D7D5
+          border-radius: 0
+          box-shadow: none
+
+          &:hover, &:focus, &:active
+            border: 1px solid $color-blue-grand
+
+        & > div
+          &:hover, &:focus, &:active
+            border: 1px solid $color-blue-grand
+
+          border: 1px solid #D7D7D5
+          background-color: #ffffff
+          padding-top: 1.7rem
+          padding-bottom: 3.5rem
+
+          #message
+            padding-top: 0
+            padding-bottom: 0
+            border: 0
+            height: 2.5rem
+            resize: none
+            transition: height 0.8s
+
+            &:hover, &:focus, &:active
+              border: 0
+
+            &.started
+              height: 7.5rem
+
+          #message + .parsley-errors-list
+            margin-top: 3.5rem
+
+        .parsley-errors-list
+          position: absolute
+          list-style-type: none
+          padding-left: 11px
+
+          li
+            color: $color-blue-grand
+            font-size: 11px
+            line-height: 13px
+            display: inline-block
+
+      #file-upload
+        +file-upload
+
+    button
+      +button(100%)
+
+      @media (min-width: 576px)
+        +button(284px)
+
+=project-listing-item
+  position: relative
+  padding: 0
+  border: none
+  margin-bottom: 0
+
+  .aspect
+    background-size: cover
+    background-repeat: no-repeat
+    padding-bottom: 100%
+    position: relative
+    overflow: hidden
+
+    & > div:first-child
+      width: 100%
+      padding-bottom: 100%
+      position: absolute
+      top: 0
+      left: 0
+      transition: transform 0.8s
+      background-size: contain
+
+    .project-info-bg
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.6) 100%)
+      width: 100%
+      height: 100%
+      position: absolute
+      opacity: 0
+
+    .project-info
+      +project-hover
+
+  &:hover, &:active
+    .aspect
+      & > div:first-child
+        transform: scale(1.2)
+
+      .project-info-bg
+        opacity: 0.5
+
+      .project-info
+        opacity: 1
+
+=post-content
+  font-size: 17px
+  line-height: 25px
+
+  .container-overflow
+    img
+      width: 100%
+
+    figcaption
+      text-align: center
+
+  .quote-overflow
+    color: #8A8A86
+    font-size: 36px
+    font-weight: 300
+    line-height: 41px
+    text-align: center
+    position: relative
+    height: 100%
+    padding: 4rem
+
+    .click-to-tweet
+      opacity: 0
+      transition: opacity 1s
+      background-color: $color-blue-grand
+      width: 100%
+      height: 100%
+      color: $color-white
+      position: absolute
+      top: 0
+      left: 0
+
+      span
+        font-family: $font-proxima-nova
+        font-size: 2rem
+        font-weight: bold
+        line-height: 4rem
+        display: inline-block
+        vertical-align: middle
+        margin-right: 2.3rem
+        letter-spacing: 0.5px
+        transform: translateY(calc(50% - 20px))
+        height: 100%
+
+      .fa-twitter-square
+        font-size: 4rem
+        vertical-align: middle
+        transform: translateY(calc(50% - 20px))
+        height: 100%
+
+    &:hover
+      .click-to-tweet
+        opacity: 0.79
+
+  h2
+    +h2
+
+  h3
+    +h3
+
+  ul, ol
+    list-style-position: outside
+    padding-left: 18px
+
+    li
+      padding-left: 5px
+
+    ul, ol
+      padding-left: 25px
+
+  .leading-paragraph
+    line-height: 30px
+
+  .note-text
+    font-size: 15px
+    line-height: 22px
+    padding: 25px 24px
+    border-radius: 8px
+    background-color: #FFF6BC
+    margin-bottom: 15px
+
+    @media (min-width: 768px)
+      margin-bottom: 0
+
+  .with-button
+    background-color: #F2F2F2
+    padding: 49px 44px
+    overflow: hidden
+    margin-bottom: 70px
+
+    p
+      margin-bottom: 0
+
+      @media (min-width: 768px)
+        line-height: 42px
+
+    .btn
+      +button(144px)
+
+  #about-the-author
+    margin-bottom: 34px
+
+    .col-xs-12
+      max-width: 586px
+      margin: 0 auto
+      float: none
+
+    h4
+      padding-bottom: 14.5px
+      border-bottom: 1px solid #E5E5E4
+      margin: 0 0 28px 0
+
+    #author-info
+      overflow: hidden
+
+      #author-photo
+        width: 170px
+        height: 170px
+        background-color: #EFEFEF
+        float: left
+        margin-right: 29px
+
+      h2
+        +h2
+
+      p
+        font-size: 15px
+        line-height: 22px

@@ -1,0 +1,12 @@
+{#
+Accepted params:
+class: appended class to svg element
+viewBox: svg dimensions
+svgName: name of svg
+#}
+
+<span class="sprite of-{{ svgName }} {{ class | default('')}}">
+  <svg class="sprite-svg" viewBox="{{ viewBox | default('0 0 1 1') }}">
+    <use xlink:href="/assets/images/icons.svg#{{svgName}}"></use>
+  </svg>
+</span>

@@ -1,0 +1,89 @@
+.work
+  .page-title
+    margin-bottom: 120px
+
+  #projects-grid
+    +categories
+
+    .tab-content
+      min-height: 100px
+
+      .row
+        & > [class*="col-"]
+          padding-right: 0
+          padding-left: 0
+
+    .thumbnail
+      +project-listing-item
+
+    .grey-bg
+      height: 80px
+
+      @media (min-width: 768px)
+        background-color: $color-footer-grey
+        height: 125px
+        margin-top: -125px
+
+      @media (min-width: 992px)
+        height: 162px
+        margin-top: -162px
+
+      @media (min-width: 1200px)
+        height: 195px
+        margin-top: -195px
+
+  #get-in-touch
+    background-color: $color-footer-grey
+
+    h3
+      margin-top: 95px
+      margin-bottom: 24px
+
+    .btn
+      +button($width: 270px)
+
+      margin: 37px auto 100px
+
+.single-project
+  .hero
+    margin: 0 auto -5rem auto
+    max-width: 1600px
+    width: 100%
+    overflow: hidden
+    transform: translateY(-109px)
+
+    #cover-image
+      padding-top: 49.41%
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: top center
+      position: relative
+      min-height: 50.3rem
+
+    .hero-content
+      background-color: transparent
+      position: absolute
+      top: 0
+      padding: 273px 0 0 0
+      width: 100%
+      min-height: 540px
+
+      #project-category
+        color: $color-white
+
+      h1
+        font-size: 42px
+        font-weight: bold
+        line-height: 46px
+        text-align: left
+        color: #FFFFFF
+        margin-bottom: 37px
+
+      #post-meta
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #FFFFFF
+
+  .content
+    +post-content

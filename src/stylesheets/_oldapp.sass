@@ -1,0 +1,475 @@
+// Variables
+$color-white: #ffffff
+$color-blue-grand: #1cafed
+$color-mid-blue-grand: #0084be
+$color-footer-grey: #f2f2f2
+$color-footer-bg: #222222
+$color-body: #373634
+$font-proxima-nova: "proxima-nova", sans-serif
+
+// mixins
+@import animations
+@import mixins
+
+// General
+body
+  box-sizing: border-box
+  font-family: 'proxima-nova', sans-serif
+  color: $color-body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1,
+h2,
+h3,
+h4
+  font-family: 'fira-sans', sans-serif
+  font-weight: bold
+
+h1
+  +h1
+
+h2
+  +h2
+
+h3
+  +h3
+
+h4
+  +h4
+
+.page-title
+  margin-top: 93px
+
+  [class*='col-']
+    h1
+      margin-top: 0
+      font-size: 3.8rem
+      line-height: 4.2rem
+      font-weight: bold
+
+      small
+        font-size: 1.4rem
+        font-weight: 600
+        line-height: 20px
+        text-transform: uppercase
+        color: $color-body
+        display: block
+        margin-bottom: 11px
+
+.tk-merriweather
+  font-size: 1.6rem
+  font-weight: 300
+  line-height: 2.5rem
+
+h2
+  small
+    color: $color-body
+    letter-spacing: 0.1rem
+
+ol
+  ol
+    list-style-type: lower-alpha
+
+.btn
+  border-radius: 0
+  border: 0
+  text-transform: uppercase
+
+.container
+  padding-left: 2.5rem
+  padding-right: 2.5rem
+
+  @media (min-width: 768px)
+    padding-left: 4rem
+    padding-right: 4rem
+    width: 100%
+
+  @media (min-width: 992px)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+    width: 970px
+
+  @media (min-width: 1200px)
+    width: 1170px
+
+  & > .row
+    @media (min-width: 1200px)
+      > [class*='col-']
+        padding-right: 0
+        padding-left: 0
+
+.container-narrow
+  @media (min-width: 992px)
+    width: 770px
+
+.w-100
+  width: 100%
+
+.full-width-img
+  max-width: 100%
+  margin: 0 auto 30px auto
+  display: block
+
+// Header
+.navbar-collapse
+  border-top: none
+
+.navbar-default.navbar
+  background-color: transparent
+  color: $color-blue-grand
+  border: none
+  margin-top: 5rem
+  margin-bottom: 0
+  padding: 0
+  z-index: 1055
+
+  & > .container
+    .navbar-brand
+      position: relative
+      width: 8rem
+
+      @media (min-width: 576px)
+        width: 11.6rem
+
+      @media (min-width: 768px)
+        margin-left: 0
+
+      @media (min-width: 1200px)
+        margin-left: -15px
+
+      .logo
+        position: absolute
+        fill: $color-blue-grand
+        width: 100%
+        top: 5px
+        max-height: 40px
+
+        &.in-modal
+          fill: $color-blue-grand !important
+
+  .navbar-nav
+    & > li
+      & > a
+        color: $color-body
+        font-size: 16px
+        font-weight: 600
+        line-height: 19px
+
+        &:after
+          content: ''
+          border-bottom: 2px solid $color-blue-grand
+          display: block
+          margin-top: 8px
+          opacity: 0
+          transform: scaleX(0)
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+
+        &:hover,
+        &:active
+          &:after
+            opacity: 1
+            transform: scaleX(1)
+
+      &.active
+        & > a
+          background-color: transparent
+          color: $color-body
+
+          &:hover,
+          &:focus
+            background-color: transparent
+            color: $color-body
+
+        & > a:after
+          opacity: 1
+          transform: scaleX(1)
+
+  .navbar-right
+    margin-right: 0
+
+    @media (min-width: 992px)
+      margin-right: -15px
+
+  .navbar-toggle
+    border: none
+    width: 14px
+    height: 22px
+    padding: 0
+
+    &:focus,
+    &:hover
+      background-color: transparent
+
+    &:before
+      content: 'Menu'
+      font-size: 16px
+      font-weight: bold
+      line-height: 19px
+      position: absolute
+      left: -55px
+      top: 4px
+
+    .icon-bar
+      background-color: $color-blue-grand
+      transform: rotate(0deg)
+      transition: 0.25s all
+      position: absolute
+      width: 100%
+      right: 0
+
+    .icon-bar:nth-child(2)
+      top: 8px
+
+    .icon-bar:nth-child(3)
+      top: 9px
+
+    .icon-bar:last-child
+      top: 14px
+
+    &.modal-open
+      overflow: visible
+
+      .icon-bar:nth-child(2)
+        transform: rotate(135deg)
+        top: 12px
+
+      .icon-bar:nth-child(3)
+        opacity: 0
+        left: -60px
+
+      .icon-bar:last-child
+        transform: rotate(-135deg)
+        top: 8px
+
+.navbar.navbar-fixed-top
+  background-color: rgba(255, 255, 255, 0.9)
+  margin-top: 0
+
+  .container
+    .navbar-brand
+      width: 8.8rem
+
+    .navbar-nav
+      & > li
+        a
+          padding: 20px 15px 0 15px
+
+.modal-fullscreen
+  background: transparent
+  padding-top: 11rem
+
+  .modal-header
+    border-bottom: none
+
+  .modal-content
+    background: transparent
+    border: 0
+    -webkit-box-shadow: none
+    box-shadow: none
+    padding: 2.5rem
+
+    .modal-header
+      padding: 0
+
+    .modal-body
+      padding: 0
+
+    .nav
+      & > li
+        margin-bottom: 0.2rem
+
+        a
+          font-size: 2rem
+          font-weight: bold
+          line-height: 6rem
+          text-align: center
+          padding: 0
+          color: $color-white
+          background-color: #444
+
+        &.active
+          a
+            color: $color-blue-grand
+
+        &:not(.active):hover,
+        &:not(.active):active
+          a
+            background-color: #6f6f6f
+
+.modal-backdrop.modal-backdrop-fullscreen
+  background: #373634
+
+.modal-backdrop.modal-backdrop-fullscreen.in
+  opacity: 1
+
+.modal-fullscreen .modal-dialog
+  margin: 0
+  margin-right: auto
+  margin-left: auto
+  width: 100%
+
+.home,
+.has-cover
+  #header
+    position: relative
+    overflow: hidden
+
+    .navbar-default
+      background-color: transparent
+      color: $color-white
+
+      .navbar-brand
+        .logo
+          fill: $color-white
+
+      .navbar-nav
+        & > li
+          & > a
+            color: inherit
+
+            &:after
+              border-bottom: 2px solid $color-white
+
+      .navbar-toggle
+        .icon-bar
+          background-color: $color-white
+
+    .navbar.navbar-fixed-top
+      background-color: rgba(255, 255, 255, 0.9)
+      color: $color-blue-grand
+
+      .navbar-brand
+        .logo
+          fill: $color-blue-grand
+
+      .navbar-nav
+        & > li
+          & > a
+            color: $color-body
+
+            &:after
+              border-bottom: 2px solid $color-blue-grand
+
+      .navbar-toggle
+        .icon-bar
+          background-color: $color-blue-grand
+
+// Footer
+#footer
+  background-color: $color-footer-bg
+  padding: 37px 0 16px 0
+
+  @media (min-width: 768px)
+    padding: 44px 0 15px 0
+
+  @media (min-width: 992px)
+    padding: 67px 0 15px 0
+
+  .logo
+    width: 88.25px
+    height: 30.3px
+    fill: $color-white
+    margin-bottom: 18px
+
+    @media (min-width: 992px)
+      width: 59px
+      height: 30px
+
+  h4
+    color: $color-white
+    font-size: 1.3rem
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 2.4rem
+
+  #footer-about
+    margin-bottom: 26.7px
+
+    @media (min-width: 768px)
+      margin-bottom: 71px
+
+    @media (min-width: 992px)
+      margin-bottom: 0
+
+    p
+      color: $color-footer-grey
+
+      @media (min-width: 992px)
+        max-width: 383px
+
+      &:last-child
+        margin-bottom: 0
+
+  #footer-links
+    color: $color-footer-grey
+
+    .list-group-item
+      background-color: transparent
+      border: none
+      padding: 5px 0
+      color: $color-footer-grey
+
+      &:hover,
+      &:active,
+      &.active
+        color: darken($color-footer-grey, 20%)
+
+    @media (min-width: 992px)
+      padding-left: 4%
+
+    .col-sm-4
+      color: $color-footer-grey
+      padding-left: 15px
+      padding-right: 15px
+
+      @media (min-width: 992px)
+        padding-left: 5.5%
+        padding-right: 5.5%
+
+  #footer-social-links
+    margin-top: 0
+
+    @media (min-width: 768px)
+      margin-top: 40px
+
+    a
+      font-size: 25px
+      color: inherit
+      display: inline-block
+      margin-right: 10px
+
+  #footer-bottom-row
+    margin-top: 4.489rem
+    font-weight: bold
+    line-height: 1.6rem
+    color: #979b9e
+
+    @media (min-width: 768px)
+      margin-top: 6.05rem
+
+    #footer-bottom-left
+      font-size: 1.1rem
+      margin-bottom: 3.2rem
+
+      @media (min-width: 768px)
+        margin-bottom: 0
+
+    #footer-bottom-right
+      font-size: 1.2rem
+      line-height: 1.4rem
+      text-transform: uppercase
+
+      @media (max-width: 767px)
+        text-align: left
+
+// Pages
+@import pages/home
+@import pages/services
+@import pages/work
+@import pages/blog
+@import pages/about
+@import pages/contact
+@import pages/landing
+
+@import modules/homeslick
