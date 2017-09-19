@@ -4,7 +4,7 @@ NEVER MAKE CHANGES TO PUBLIC_HTMl. Any changes to the site should be done on the
 ## Prerequisites
 * [Install node using nvm or brew](https://github.com/creationix/nvm#installation)
 * [install yarn](https://yarnpkg.com/lang/en/docs/install/)
-* Clone the repo `git clone git@bitbucket.org:granddevelopers/grand2017.git`
+* Clone the repo 
 * In the clone repo directory execute `yarn install`
 * Craft will need to run on a local LAMP stack e.g. MAMP
 
